@@ -34,6 +34,20 @@ Indigenous culture→ Some cultures have a higher meaning of having tattoos than
   Offensive symbols→ By allowing users to specify what type of tattoo they want generated, there is potential for the creation (accidental or not) of offensive words and symbols. The dataset the model is trained on may contain tattoos with offensive symbols, but for the scope of this project we do not have the capacity to screen our dataset as thoroughly as we would like.
   What words are used→ Since many existing tattoos may contain words of profanity, the data we trained on may lead to tattoo generations with hatred and disrespect. We need to ensure that generated tattoos avoid discriminating words or terms which are offensive to groups. 
   Providing the same tattoo over and over again→ This may be a more personal issue for private users who want to have a distinct tattoo as much as possible. We cannot guarantee that the program will not supply the exact same tattoo, which should also be added a a disclaimer, as well as providing the program with some variation parameter, that will make slight changes between every graphic we provide.
+  
+  
+## Methods
+
+Our methods for this project fall into three major steps. First, we will collect images to create a tattoo dataset. Second, we will create pieces of a GAN from scratch (the discriminator and generator neural networks). Third, we will utilize and modify an existing StyleGAN to generate tattoo images.
+
+We will create our dataset by scraping images from Google Images and using FastAI. 
+We aim to collect 500 distinct images, where similar images would not count as distinct. If we are unable to do so we will reduce the goal number in accordance with what we are able to scrape for this project, taking into consideration the limitation of data and especially time and cost. We could also use data augmentation if we don’t have enough data: cropping images, changing backgrounds and skin tones, zooming in and zooming out, etc. 
+
+The challenges we may face when collecting our data is that the scraped images will have varying backgrounds which may make it difficult to isolate the data required. For example, tattoo images may appear on body parts or art on a plain white background. We plan to address this problem by attempting to use a helper function or program which can remove the backgrounds of tattoos, and placing them on homogeneous backgrounds.
+
+For our model, we will use an existing GAN (such as Pytorch DCGAN,  text-2-image, or StyleGAN). We will first use only the outline of these models and attempt to write our own neural networks that will act as a discriminator and a generator. We will connect the generator and discriminator: formatting input and output, configuring the dataset, and fine-tuning the parameters. Then we will train our network on the images from our dataset and run it. After that, we will fully utilize an existing GAN (likely StyleGAN), train on our images, and create new images from the network. We will look at the results and modify certain attributes such as learning rate, number of epochs, and batch size as needed. 
+
+Our project will focus on generating realistic tattoo images on people’s bodies, within the constraints of the class.
 
 
 ## References
