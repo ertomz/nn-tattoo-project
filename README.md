@@ -50,6 +50,20 @@ For our model, we will use an existing GAN (such as Pytorch DCGAN,  text-2-image
 Our project will focus on generating realistic tattoo images on people’s bodies, within the constraints of the class.
 
 
+## Discussion
+
+We created our own dataset using Google extensions Web Scraper and Tab Save to scrape 500 tattoo images on various parts of human bodies and on white backgrounds from Google Images. 
+
+We will feed the raw images to the GAN we create and see what tattoo images GAN will create. If the generated tattoo images contain a significant amount of noise, for example, blobs like human skins, we will clean the dataset by removing the background and retrain our model. 
+
+Regarding our networks, we followed an existing Pytorch tutorial to implement a specific type of GAN called DCGAN. After running this network on the provided tutorial dataset as well as our own datasets, we decided to change certain parameters and train and compare several new versions of the DCGAN model. [Link will be provided in a later iteration of this discussion.]
+
+Our comparison focuses on the success of the different models on our tattoo dataset. For this application of image generation, “success” must be determined by us humans by looking at the produced images and judging them based on what appears to be a clean image of something tattoo-like. 
+
+We hope to be able to determine if the model is overfitting or not by judging the generated images for variety and uniqueness. We also hope that if we run the model several times, the generated images will look somewhat different each time. [Include actual results in a later iteration of this discussion.]
+Looking at existing tattoo generation models, we are currently unsure how our results compare. We will be able to have a clearer statement of comparison after running the model and producing images, which will be included in a later iteration of this discussion. [Add comments about why ours is better or worse or unidentifiable different in a later iteration of this discussion.]
+
+
 ## References
 <a id="1">[1]</a>
 Betin, Vasily. “Artificially Generated Tattoo.” Artificially Generated Tattoo, Medium, 12 Mar. 2020, https://medium.com/vasily-betin/artificially-generated-tattoo-2d5fbe0f5146. 
