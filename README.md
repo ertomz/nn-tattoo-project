@@ -48,8 +48,11 @@ Black-white images dataset, batch size of 32, epochs 100, lr 0.0005, 345 images
 ![images-bw-32-100-0005-345-loss](/images/images-bw-32-100-0005-345-loss.png)
 
 Black-white images dataset, batch size of 32, epochs 200, lr 0.0005, 345 images
+![images-bw-32-200-0005-345](/images/images-bw-32-100-0005-345.png)
 
 Black-white images dataset, batch size of 32, epochs 1000, lr 0.0005, 345 images
+![images-bw-32-1000-0005-345](/images/images-bw-32-1000-0005-345.png)
+![images-bw-32-1000-0005-345-loss](/images/images-bw-32-1000-0005-345-loss.png)
 
 Color images dataset, batch size of 32, epochs 500, lr 0.0005, 229 images
 ![images-color-32-500-0005-229](/images/images-color-32-500-0005-229.png)
