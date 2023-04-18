@@ -30,6 +30,8 @@ Tattoodo, an online platform developed by Vuksic, utilized neural networks to re
 
 In his 2020 Medium post Vasily Betin describes how his love for tattoos and technology led him to create his own tattoo generation model. He outlines how he created his dataset of images of tattoos by scraping Instagram and Pinterest, cleaned the data, trained the network on low then high resolution images, and then continued to upscale and perfect the model. After generating over 2,000 images, Vasily chose his favorites and actually got one tattooed on his arm. The model is released on RunwayML with a public Github Repo. 
 
+![dcgan-tutorial-results](/images/dcgan-tutorial-results.png)
+
 
 ## Methods
 
@@ -42,15 +44,19 @@ We had better results with the black and white dataset. We saw that with a too l
 Selected Results:
 
 Black-white images dataset, batch size of 32, epochs 100, lr 0.0005, 345 images
+![images-bw-32-100-0005-345](/images/images-bw-32-100-0005-345.png)
+![images-bw-32-100-0005-345-loss](/images/images-bw-32-100-0005-345-loss.png)
 
 Black-white images dataset, batch size of 32, epochs 200, lr 0.0005, 345 images
 
 Black-white images dataset, batch size of 32, epochs 1000, lr 0.0005, 345 images
 
 Color images dataset, batch size of 32, epochs 500, lr 0.0005, 229 images
+![images-color-32-500-0005-229](/images/images-color-32-500-0005-229.png)
 
 Color images dataset, batch size of 32, epochs 1000, lr 0.0005, 229 images
-
+![images-color-32-1000-0005-229](/images/images-color-32-1000-0005-229.png)
+![images-color-32-1000-0005-229-loss](/images/images-color-32-1000-0005-229-loss.png)
 
 
 ## Discussion
