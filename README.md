@@ -4,9 +4,7 @@
 
  Tattoos are personal, permanent, and pretty hard to design. While it’s exciting to engage in the intimate process of working with a tattoo artist to help design a tattoo, that process can take a long time and cost a lot of money. It’s common to get inspiration from images of tattoos online, but what if you don’t want a design that’s trending? Where do you go if you want to design something that is completely unique? Consider consulting a neural network. 
 	
-Current art generators can produce tattoo recommendations, though they may look unrealistic and intimidating due to an emphasis on artistic value over reasonable tattoo recommendations. There do exist, however, several implementations of tattoo-specific generative models. These models are built on generative adversarial networks (GANs) which produce a collection of unique tattoos after being trained on an input dataset of tattoo images scraped from various websites. 
-	
-We aim to build our own tattoo GAN from scratch, using FastAI to create a dataset of tattoo images. While this sounds lofty, we want to pursue it in order to best learn the inner workings of a generative neural network. If after 2 weeks we have not built a model that successfully creates unique tattoos, we will begin working with various existing tattoo GANs, creating our own datasets, and comparing the model’s output.
+Current art generators can produce tattoo recommendations, though they may look unrealistic and intimidating due to an emphasis on artistic value over reasonable tattoo recommendations. There do exist, however, several implementations of tattoo-specific generative models. These models are built on generative adversarial networks (GANs) which produce a collection of unique tattoos after being trained on an input dataset of tattoo images scraped from various websites. We aim to train an existing DCGAN model, using FastAI to create a dataset of tattoo images. 
 
 This is an important area of research because 36% of young adults in the United States have tattoos (History of Tattoos, 2023). This is a large number, but consider the many more people who might be considering getting a tattoo but haven’t yet and might benefit from unique inspiration. This is also a difficult area of research because of the controversies around using generative models for art. Many artists have expressed frustration with these models for mimicking their work, raising questions about the ethics of producing images and about what unique artwork actually is.
   
@@ -34,6 +32,16 @@ In his 2020 Medium post Vasily Betin describes how his love for tattoos and tech
 
 
 ## Methods
+
+Our methods for this project fall into three major steps. First, we will collect images to create a tattoo dataset. Second, we will utilize and modify an existing GAN that generates facial images to generate tattoo images.
+
+The challenges we faced when initially collecting our data is that the scraped images had varying backgrounds which made it difficult to isolate the data required. For example, tattoo images may appear on body parts or art on a plain white background. We plan to address this problem by collecting data with white backgrounds selectively. 
+
+We will create our dataset by scraping images from Google Images using Google Extensions such as TabSave and WebScraper. We aim to collect approximately 500 images containing black tattoo art on white backgrounds.  
+
+For our model, we will use an existing GAN (such as Pytorch DCGAN, text-2-image, or StyleGAN). We will first use only the outline of these models and attempt to write our own neural networks that will act as a discriminator and a generator. We will connect the generator and discriminator: formatting input and output, configuring the dataset, and fine-tuning the parameters, including  epochs, learning rate, generator, discriminator, and batch size. Then we will attempt to train our network on the images from our dataset and run it. After that, we will fully utilize an existing GAN (likely StyleGAN), train on our images, and create new images from the network. We will look at the results and modify certain attributes such as learning rate, number of epochs, and batch size as needed. 
+
+Our project will focus on generating realistic tattoo images on people’s bodies, within the constraints of the class.
 
 
 ## Results
