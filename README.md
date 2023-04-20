@@ -113,6 +113,22 @@ The eighth, and final ethical consideration (for now), involves language on tatt
 Overall, we have many many ethical considerations at play within our tattoo generation project. While most were not feasible for our timeline and capabilities, we benefit greatly from thinking about them, writing about them, and proposing that they be used as this project is improved in the future.
 
 
+## Reflection
+The model was not as effective on generating new images as we had originally anticipated. The quality and size of our dataset had a much greater effect on the results of the model, and we were forced to take a step backwards in our initial project plan to produce more efficient results using a more specific dataset of black tattoos on white backgrounds. We speculated in our discussion section that our results may become clearer if we had a more sizable dataset which was closer to the size of the facial dataset. It was less difficult to modify our model parameters to generate images when using our new dataset, and our project team was able to generate visible progress towards generating new images which not only began to become less pixelated, but began to form shapes as well. We believe that it was easier for our model to distinguish tattoo art when images were placed in direct comparison to plain white backgrounds. 
+
+While the project team is fairly confident that our results have not produced any ethical concerns thus far, we aim to remain cautious in our future work.  
+
+In a different, future project, we would better prepare for the project by starting out with a simpler dataset to begin working with. Once we have generated a sizable dataset (perhaps around 1,000 images or so), we would then begin refining a model to accurately produce images using that model. From there, we would potentially begin to diversify and expand our training dataset, and continue to modify our model parameters as fit to continue producing viable results. 
+
+There are many ways to continue the work that we have done here, so we will only mention a few direct or immediate ones that can be taken. The first step that can be taken is cleaning the data we have right now to have cleaner images of only tattoos, without background or body parts. We have a pretty small number of images, so before gathering more images we can manipulate the current images–twist and turn them–to use these as more data points. A good next step would be to just have more distinct images, aim for  much larger datasets with at least 5000 images for each of the datasets we have - colored and black and white. Another way to continue this work is to combine some kind of classification neural network, so it can be used to distinguish between images and maybe train smaller batches according to categories of tattoos.
+
+
+## Future Work
+The model has struggled to yet effectively generate new designs which the project team essentially set out to achieve. 
+
+Our project also ran into difficulties when attempting to run our model on images which contained color, or more specifically, when our scraped images included tattoos already on skin. Future work would be to better develop the model to account for the tattoos depicted on human skin, or to better clean up our initial database. Furthermore, future work could be done in classifying images under specific shapes and design tags so that the model may generate images given a user-specified prompt.
+
+
 ## References
 <a id="1">[1]</a>
 Betin, Vasily. “Artificially Generated Tattoo.” Artificially Generated Tattoo, Medium, 12 Mar. 2020, https://medium.com/vasily-betin/artificially-generated-tattoo-2d5fbe0f5146. 
