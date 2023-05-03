@@ -51,7 +51,7 @@ We had better results with the black and white dataset. We saw that with a too l
 
 Selected Results:
 
-** BW Dataset **
+**BW Dataset**
 
 ![bw-32-200-0005-345](/images/bw-32-200-0005-345.png)
 *Fig 2. Training vs produced images with the following specifications: trained on the BW dataset, batch size 32, 200 epochs, 0.0005 learning rate, 345 images*
@@ -66,7 +66,7 @@ Selected Results:
 *Fig 5. Generator and Discriminator Loss during training for the following specifications: trained on the BW dataset, batch size 32, 1000 epochs, 0.0005 learning rate, 345 images*
 
 
-** Colored Dataset **
+**Colored Dataset**
 
 ![color-32-200-0005-591](/images/color-32-200-0005-591.png)
 *Fig 6. Training vs produced images with the following specifications: trained on the colored dataset, batch size 32, 200 epochs, 0.0005 learning rate, 591 images*
@@ -81,7 +81,7 @@ Selected Results:
 *Fig 9. Generator and Discriminator Loss during training for the following specifications: trained on the BW dataset, batch size 32, 1000 epochs, 0.0005 learning rate, 591 images*
 
 
-** Combined Datset **
+**Combined Datset**
 
 ![combined-32-200-0005-936](/images/combined-32-200-0005-936.png)
 *Fig 10. Training vs produced images with the following specifications: trained on the combined dataset, batch size 32, 200 epochs, 0.0005 learning rate, 936 images*
