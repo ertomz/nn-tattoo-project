@@ -32,15 +32,15 @@ In his [2020 Medium post Vasily Betin](https://medium.com/vasily-betin/artificia
 
 ## Methods
 
-Our methods for this project fall into three major steps. First, we will collect images to create a tattoo dataset. Second, we will utilize and modify an existing GAN that generates facial images to generate tattoo images.
+Our methods for this project fell into two major steps. First, we collected images to create three different tattoo datasets. Second, we utilized and modified an existing GAN that generated facial images to generate tattoo images.
 
-The challenges we faced when initially collecting our data is that the scraped images had varying backgrounds which made it difficult to isolate the data required. For example, tattoo images may appear on body parts or art on a plain white background. We plan to address this problem by collecting data with white backgrounds selectively. 
+One of the challenges we faced when initially collecting our data was that the scraped images had varying backgrounds which made it difficult to isolate the data required. For example, tattoo images might appear on body parts or art on a plain white background. We planned to address this problem by collecting data with white backgrounds selectively. 
 
-We will create our dataset by scraping images from Google Images using Google Extensions such as TabSave and WebScraper. We aim to collect approximately 500 images containing black tattoo art on white backgrounds.  
+We created our dataset by scraping images from Google Images using Google Extensions such as [TabSave](https://chrome.google.com/webstore/detail/tab-save/lkngoeaeclaebmpkgapchgjdbaekacki?hl=en) and [WebScraper](https://webscraper.io/). We separated images into three datasets. First, we created a dataset of 346 images containing only black tattoo artwork on white background. Second, we created a dataset of 591 images containing real tattoos on various parts of the human body. Third, we combined these two datasets into a final dataset of 937 images.  
 
-For our model, we will use an existing GAN (such as Pytorch DCGAN, text-2-image, or StyleGAN). We will first use only the outline of these models and attempt to write our own neural networks that will act as a discriminator and a generator. We will connect the generator and discriminator: formatting input and output, configuring the dataset, and fine-tuning the parameters, including  epochs, learning rate, generator, discriminator, and batch size. Then we will attempt to train our network on the images from our dataset and run it. After that, we will fully utilize an existing GAN (likely StyleGAN), train on our images, and create new images from the network. We will look at the results and modify certain attributes such as learning rate, number of epochs, and batch size as needed. 
+For our model, we used a [Pytorch tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html) to implement an existing DCGAN model. We added our own dataset folder called data_t (t for tattoo) and made adjustments to the code, as can be seen in our [nn-tattoo-project-code github page](https://github.com/ertomz/nn-tattoo-project-code). We trained the model separately on three datasets: tattoo designs, colorful tattoo images which might also include background and skin, and combined images. Along the runs we fine-tuned the hyperparameters, including epochs, learning rate, generator, discriminator, and batch size to get to the best results we can within our data set and time.
+Our project focused on generating realistic tattoo images on people’s bodies.
 
-Our project will focus on generating realistic tattoo images on people’s bodies, within the constraints of the class.
 
 
 ## Results
