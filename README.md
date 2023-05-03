@@ -1,5 +1,10 @@
 # Designing Tattoos with a Neural Network
 
+## Abstract
+
+Tattoos are personal, permanent, and pretty hard to design. While it’s exciting to engage in the intimate process of working with a tattoo artist to help design a tattoo, that process can take a long time and cost a lot of money. Tattoo creation by neural network (NN) is an interesting problem to address, especially as it has barely been done before. We collected images (n=936) to create three tattoo datasets–black-white, colorful, and combined–by scraping images from Google Images. We also utilized and modified an existing DCGAN that generates facial images, based on its Pytorch tutorial, to generate tattoo images. All three datasets tended to generate similar images in that generated images often shared similar colors and shapes. We modified the hyperparameters and had the best results with learning rate of 0.0005, batch size of 32 and various numbers of epochs. However, none of the results were satisfactory enough to be accounted as successful. We suspect that the relatively small size of the tattoo dataset mainly attributes to the drop down of performance. During the project, various ethical concerns were raised, and we outlayed eight main concerns spanning from copyrights to offensive images and skin color for tattoos. Future work would be to better develop the model to account for the tattoos depicted on human skin and to better clean up our initial database, among others.
+
+
 ## Introduction
 
 Tattoos are personal, permanent, and pretty hard to design. While it’s exciting to engage in the intimate process of working with a tattoo artist to help design a tattoo, that process can take a long time and cost a lot of money. It’s common to get inspiration from images of tattoos online, but what if you don’t want a design that’s trending? Where do you go if you want to design something that is completely unique? Consider consulting a neural network. 
