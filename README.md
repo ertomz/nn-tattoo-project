@@ -27,8 +27,9 @@ There are several current generative tattoo models that utilize neural nets to p
 
 In his [2020 Medium post Vasily Betin](https://medium.com/vasily-betin/artificially-generated-tattoo-2d5fbe0f5146)[[3]](#3) describes how his love for tattoos and technology led him to create his own tattoo generation model. He outlines how he created his dataset of images of tattoos by scraping Instagram and Pinterest, cleaned the data, trained the network on low then high resolution images, and then continued to upscale and perfect the model. After generating over 2,000 images, Vasily chose his favorites and actually got one tattooed on his arm. The model is released on RunwayML with a public Github Repo. 
 
-![dcgan-tutorial-results](/images/dcgan-tutorial-results.png)
-* Fig 1. Screenshot from the training process of Vasily Betin’s tattoo generator [[3]](#3) *
+{% figure caption: "Fig 1. Screenshot from the training process of Vasily Betin’s tattoo generator [[3]](#3)" %}
+  ![dcgan-tutorial-results](/images/dcgan-tutorial-results.png)
+{% endfigure %}
 
 
 ## Methods
